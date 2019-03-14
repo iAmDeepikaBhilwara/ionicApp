@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Add customers
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  
+<!-- <input type="text" placeholder="id" [(ngModel)]="customer.id"><br><br> -->
+<!-- <ion-item>
+     <ion-input placeholder="Enter Id" [(ngModel)]="customer.name"></ion-input>
+</ion-item> -->
+<ion-card>
+<ion-item>
+    <ion-label position="floating">Name:</ion-label>
+  <ion-input placeholder="Enter Name" [(ngModel)]="customer.name"></ion-input>
+</ion-item><br><br>
+
+<ion-item>
+    <ion-label position="floating">Email:</ion-label>
+  <ion-input placeholder="Enter Email" [(ngModel)]="customer.email"></ion-input>
+</ion-item><br><br>
+
+<ion-item>
+    <ion-label position="floating">Address:</ion-label>
+  <ion-input placeholder="Enter Address" [(ngModel)]="customer.address"></ion-input>
+</ion-item><br><br>
+
+<ion-item>
+    <ion-label position="floating">Phone:</ion-label>
+  <ion-input placeholder="Enter Phone" [(ngModel)]="customer.phone"></ion-input>
+</ion-item><br><br>
+
+<ion-button expand="full" (click)="addCustomers(customer)"color="success">Add customer</ion-button>
+
+
+</ion-card>
+</ion-content>
+
+
+
+
+
+
+

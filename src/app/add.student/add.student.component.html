@@ -1,0 +1,73 @@
+
+  <ion-content>
+      <ion-header>
+          <ion-toolbar>
+            <ion-title>
+              Student Details:
+            </ion-title>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-card>
+
+
+  <ion-item>
+    <ion-label position="floating">RollNo</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">First Name</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Birth Date</ion-label>
+           
+              <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+           
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="floating">Class</ion-label>
+          <ion-select placeholder="Select One">
+              <ion-select-option value="one">1</ion-select-option>
+              <ion-select-option value="two">2</ion-select-option>
+              <ion-select-option value="three">3</ion-select-option>
+              <ion-select-option value="four">4</ion-select-option>
+            </ion-select>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Subjects:</ion-label>
+            <ion-select multiple="true">
+                <ion-select-option value="maths" selected>Maths</ion-select-option>
+                <ion-select-option value="science">Science</ion-select-option>
+                <ion-select-option value="english" selected>English</ion-select-option>
+                <ion-select-option value="hindi">Hindi</ion-select-option>
+                <ion-select-option value="history">History</ion-select-option>
+              </ion-select>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+              <ion-label position="floating">Teacher</ion-label>
+              <ion-input type="text"></ion-input>
+        </ion-item>
+
+       <ion-item>
+              <ion-label position="floating">Address</ion-label>
+              <ion-input type="text"></ion-input>
+      </ion-item><br><br>
+         <ion-button expand="full" color="success"(click)="addStudents()">Add Students</ion-button>
+         </ion-card>
+          </ion-content>
+         
+ 

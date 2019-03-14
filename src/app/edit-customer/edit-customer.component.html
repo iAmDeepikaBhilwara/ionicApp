@@ -1,0 +1,38 @@
+<ion-content>
+  <ion-card>
+
+        <ion-item>
+                <ion-label position="floating">Name:</ion-label>
+              <ion-input placeholder="Name" [(ngModel)]="customer.name"></ion-input>
+            </ion-item><br><br>
+            
+            <ion-item>
+                <ion-label position="floating">Email:</ion-label>
+              <ion-input placeholder="Email" [(ngModel)]="customer.email"></ion-input>
+            </ion-item><br><br>
+            
+            <ion-item>
+                <ion-label position="floating">Address:</ion-label>
+              <ion-input placeholder="Address" [(ngModel)]="customer.address"></ion-input>
+            </ion-item><br><br>
+            
+            <ion-item>
+                <ion-label position="floating">Phone:</ion-label>
+              <ion-input placeholder="Phone" [(ngModel)]="customer.phone"></ion-input>
+            </ion-item><br><br>
+    
+    <ion-button expand="full" (click)="updateCustomer(customer)" color="success">Update</ion-button>
+    
+</ion-card>
+</ion-content>
+
+
+        
+       
+        
+       
+        
+        
+        
+        
+        

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Customers list:
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-card *ngFor="let c of list">
+
+    <ion-card-header>
+        
+       <ion-card-title><ion-icon name="contact"></ion-icon>&nbsp;{{c.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="trash" (click)="deleteCustomer(c.id)"></ion-icon></ion-card-title>
+    </ion-card-header>
+    <!-- <ion-icon name="mail"></ion-icon> {{c.id}}<br> -->
+    <ion-icon name="mail"></ion-icon> {{c.email}}<br>
+    <ion-icon name="pin"></ion-icon> {{c.address}}<br>
+    <ion-icon name="call"></ion-icon> {{c.phone}}<br>
+   <h3> <ion-icon (click)="onSelect(c.id)" name="create" color="blue"></ion-icon></h3>
+    
+</ion-card>
+</ion-content>
+<ion-button (click)="deleteAllCustomers()" color="danger">Delete All</ion-button>
+
+
