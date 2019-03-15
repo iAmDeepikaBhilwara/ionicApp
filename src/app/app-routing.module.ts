@@ -9,6 +9,7 @@ import { ListCustomerComponent } from './list.customer/list.customer.component';
 import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { StudentComponent } from './student/student.component';
 import { ListStudentComponent } from './list.student/list.student.component';
+import { EditStudentComponent } from './edit-student/edit-student.component';
 import { AddStudentComponent } from './add.student/add.student.component';
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'editCustomer/:id',component:EditCustomerComponent},
   { path: 'student',component:StudentComponent},
   { path: 'add-student', component:AddStudentComponent},
-  { path: 'list-student',component:ListStudentComponent}
+  { path: 'list-student',component:ListStudentComponent},
+  { path: 'edit-student/:id',component:EditStudentComponent}
   
 ];
 

@@ -13,17 +13,17 @@
 
   <ion-item>
     <ion-label position="floating">RollNo</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="student.rollno"></ion-input>
   </ion-item>
   
   <ion-item>
     <ion-label position="floating">First Name</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text"[(ngModel)]="student.firstName"></ion-input>
   </ion-item>
 
   <ion-item>
       <ion-label position="floating">Last Name</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="student.lastName"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -31,7 +31,7 @@
            
               <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
            
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="student.birthDate"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -42,7 +42,7 @@
               <ion-select-option value="three">3</ion-select-option>
               <ion-select-option value="four">4</ion-select-option>
             </ion-select>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="student.class"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -54,19 +54,19 @@
                 <ion-select-option value="hindi">Hindi</ion-select-option>
                 <ion-select-option value="history">History</ion-select-option>
               </ion-select>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text"[(ngModel)]="student.subjects"></ion-input>
         </ion-item>
 
         <ion-item>
               <ion-label position="floating">Teacher</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" [(ngModel)]="student.teacher"></ion-input>
         </ion-item>
 
        <ion-item>
               <ion-label position="floating">Address</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" [(ngModel)]="student.address"></ion-input>
       </ion-item><br><br>
-         <ion-button expand="full" color="success"(click)="addStudents()">Add Students</ion-button>
+         <ion-button expand="full" color="success"(click)="addStudents(student)">Add Students</ion-button>
          </ion-card>
           </ion-content>
          

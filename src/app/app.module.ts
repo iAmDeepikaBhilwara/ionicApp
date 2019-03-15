@@ -19,13 +19,14 @@ import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { StudentComponent } from './student/student.component';
 import { ListStudentComponent } from './list.student/list.student.component';
 import { AddStudentComponent } from './add.student/add.student.component';
+import { EditStudentComponent } from './edit-student/edit-student.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent,
     LoginComponent,DashboardComponent,AboutComponent,
     CustomerComponent,AddCustomerComponent,ListCustomerComponent,EditCustomerComponent,
-    StudentComponent,AddStudentComponent,ListStudentComponent],
+    StudentComponent,AddStudentComponent,ListStudentComponent,EditStudentComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule],
   providers: [

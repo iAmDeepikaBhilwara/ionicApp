@@ -13,4 +13,14 @@ export class ListStudentComponent implements OnInit {
   ngOnInit() {
   this.list=this.studentService.getStudents();
 }
+
+deleteAllStudents()
+{
+  this.studentService.deleteAllStudents();
+}
+deleteStudent(id)
+{
+  this.studentService.deleteStudent(id);
+}
+
 }

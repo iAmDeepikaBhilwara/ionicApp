@@ -30,5 +30,28 @@ getStudents()
   return this.students;
 }
 
+addStudents(student)
+{
+  //student.rollno=Math.round(Math.random()*10000);
+  this.students.push(student);
+}
+
+deleteAllStudents()
+{
+  
+  this.students.length = 0;
+}
+
+deleteStudent(id)
+{
+  for(var i=0;i<this.students.length;i++)
+  {
+    if(id==this.students[i].id)
+    {
+      this.students.splice(i,1);
+    }
+  }
+}
+
 }
 
