@@ -11,10 +11,15 @@ export class ListCustomerComponent implements OnInit {
 
   list=[];
   constructor(private customerService:CustomerService,private router:Router) { 
-    this.list=this.customerService.getCustomers();
+   
+  
+    // this.list=this.customerService.getCustomers();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // this.list=this.customerService.getCustomers()
+    this.customerService.getRemoteCustomers().subscribe((result) => {this.list = result;});
+  }
 
      deleteAllCustomers(){
        this.customerService.deleteAllCustomers();
@@ -29,7 +34,13 @@ export class ListCustomerComponent implements OnInit {
       this.router.navigate(['/editCustomer/',+id]);
      }
 
-     deleteCustomer(id){
-       this.customerService.deleteCustomer(id);
-     }
+    //  deleteCustomer(id){
+    //    this.customerService.deleteCustomer(id);
+    //  }
+     deleteCustomer(c){
+      this.customerService.deleteRemoteCustomer(c).subscribe((e) => {
+        this.customerService.getRemoteCustomers().subscribe((result) => {this.list = result;});
+      });
+     // this.list = this.customerService.getCustomers();
+    }
   }

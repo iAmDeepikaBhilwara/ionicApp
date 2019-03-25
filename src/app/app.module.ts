@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule }    from '@angular/common/http';
 
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -28,7 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
     CustomerComponent,AddCustomerComponent,ListCustomerComponent,EditCustomerComponent,
     StudentComponent,AddStudentComponent,ListStudentComponent,EditStudentComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,

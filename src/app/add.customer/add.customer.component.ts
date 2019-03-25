@@ -18,9 +18,9 @@ export class AddCustomerComponent implements OnInit {
 
   addCustomers(customer)
   {
-    this.customerService.addCustomers(customer);
+    this.customerService.addRemoteCustomers(customer).subscribe(()=>this.router.navigate(['./list-customer']));
     this.customer={id:0,name:" ",email:" ",address:" ",phone:" "};
-    this.router.navigate(['./list-customer']);
+    
 
   }
 

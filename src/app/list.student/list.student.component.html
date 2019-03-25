@@ -15,13 +15,15 @@
   
       <ion-card-header>
           
-         <ion-card-title><ion-icon name="contact"></ion-icon>&nbsp;{{ s.firstName }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="trash" (click)="deleteStudent(s.id)"></ion-icon></ion-card-title>
+         <ion-card-title><ion-icon name="contact"></ion-icon>&nbsp;{{ s.firstName }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon name="trash" (click)="deleteStudent(s.rollno)"></ion-icon></ion-card-title>
       </ion-card-header>
       <!-- <ion-icon name="mail"></ion-icon> {{c.id}}<br> -->
       <ion-icon name="mail"></ion-icon> {{ s.lastName }}<br>
       <ion-icon name="pin"></ion-icon> {{ s.address }}<br>
-      <ion-icon name="call"></ion-icon> {{ s.teacher }}<br>
-     <h3> <ion-icon (click)="onSelect(s.id)" name="create" color="blue"></ion-icon></h3>
+      <ion-icon name="person"></ion-icon> {{ s.teacher }}<br>
+     <h3> <ion-icon (click)="onSelect(s.rollno)" name="create" color="blue"></ion-icon></h3>
+     <!-- <ion-icon name="create" (click)="editStudent()"></ion-icon> -->
       
   </ion-card>
   </ion-content>

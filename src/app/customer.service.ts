@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { catchError, map, tap } from 'rxjs/operators';
+import { Observable} from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
+  private customerUrl = 'http://localhost:3000/api/customers';
+
   
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
 
   customer={
@@ -27,16 +32,27 @@ export class CustomerService {
   // ];
   customers=JSON.parse(localStorage.getItem('customers'));
 
+  getRemoteCustomers(): Observable<[]>{
+  	return this.http.get<[]>(this.customerUrl); 		
+ }
+ deleteRemoteCustomer(customer){
+  return this.http.delete(this.customerUrl+"/"+customer.id); 		
+}
+
+getRemoteCustomersById(id): Observable<[]>{
+  return this.http.get<[]>(this.customerUrl+"/"+id); 		
+}
+
   
   getCustomers(){
 
+    this.customers=JSON.parse(localStorage.getItem('customers'));
     
-    
-    if(localStorage.getItem('customers').length!=null)
-    {
-      this.customers=JSON.parse(localStorage.getItem('customers'));
-    }
-    return this.customers;
+    // if(localStorage.getItem('customers').length!=null)
+    // {
+    //   this.customers=JSON.parse(localStorage.getItem('customers'));
+    // }
+    // return this.customers;
   }
 
   deleteAllCustomers()
@@ -61,6 +77,10 @@ export class CustomerService {
     localStorage.setItem('customers',JSON.stringify(this.customers));
   }
 
+  updateRemoteCustomer(customer):Observable<any>{
+    return this.http.put(this.customerUrl+"/"+customer.id,customer);
+  }
+
 
 
   deleteCustomer(id){
@@ -78,8 +98,9 @@ export class CustomerService {
 
   }
 
-  addCustomers(customer){
-    customer.id=Math.round(Math.random()*1000000);
+  addRemoteCustomers(customer): Observable<any>{
+    return this.http.post(this.customerUrl,customer);
+    // customer.id=Math.round(Math.random()*1000000);
     this.customers.push(customer);
     localStorage.setItem('customers',JSON.stringify(this.customers));
 

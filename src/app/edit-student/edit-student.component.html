@@ -1,3 +1,38 @@
-<p>
-  edit-student works!
-</p>
+<ion-content>
+  <ion-card>
+
+        <ion-item>
+                <ion-label position="floating">First Name:</ion-label>
+              <ion-input placeholder="First Name" [(ngModel)]="student.firstName"></ion-input>
+            </ion-item><br><br>
+            
+            <ion-item>
+                <ion-label position="floating">Last Name:</ion-label>
+              <ion-input placeholder="Last Name" [(ngModel)]="student.lastName"></ion-input>
+            </ion-item><br><br>
+            
+            <ion-item>
+                <ion-label position="floating">Address:</ion-label>
+              <ion-input placeholder="Address" [(ngModel)]="student.address"></ion-input>
+            </ion-item><br><br>
+            
+            <ion-item>
+                <ion-label position="floating">Teacher:</ion-label>
+              <ion-input placeholder="Phone" [(ngModel)]="student.teacher"></ion-input>
+            </ion-item><br><br>
+    
+    <ion-button expand="full" (click)="updateStudent(student)" color="success">Update</ion-button>
+    
+</ion-card>
+</ion-content>
+
+
+        
+       
+        
+       
+        
+        
+        
+        
+        
